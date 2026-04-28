@@ -1,19 +1,13 @@
 ---
 name: Bug report
-about: Create a report to help us improve
+about: Report a problem
 title: "[BUG]"
-labels: ''
+labels: bug
 assignees: ''
 
 ---
 
----
-name: Bug report
-about: Report a problem
-title: "[Bug] "
-labels: bug
-assignees: ""
----
+# Bug
 
 ## Description
 What is the problem?
