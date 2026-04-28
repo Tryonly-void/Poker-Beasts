@@ -1,5 +1,4 @@
-# Poker-Beasts
-# Association Website
+# Poker-Beasts Website
 
 ## Description
 
