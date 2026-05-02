@@ -1,7 +1,7 @@
 import "./App.css";
 
 const colorways = {
-  "/colorway-1": {
+  "1": {
     name: "Colorway 1",
     text: "#FAF6F0",
     background: "#2B2D33",
@@ -9,7 +9,7 @@ const colorways = {
     secondary: "#5BAFD6",
     accent: "#00C9A7",
   },
-  "/colorway-2": {
+  "2": {
     name: "Colorway 2",
     text: "#FAF6F0",
     background: "#1E2A3A",
@@ -17,7 +17,7 @@ const colorways = {
     secondary: "#F0783D",
     accent: "#F5C518",
   },
-  "/colorway-3": {
+  "3": {
     name: "Colorway 3",
     text: "#F8FAFC",
     background: "#0F172A",
@@ -28,8 +28,9 @@ const colorways = {
 };
 
 function App() {
-  const path = window.location.pathname;
-  const theme = colorways[path] || colorways["/colorway-1"];
+  const params = new URLSearchParams(window.location.search);
+  const selected = params.get("colorway") || "1";
+  const theme = colorways[selected] || colorways["1"];
 
   return (
     <main
@@ -44,9 +45,9 @@ function App() {
       <nav className="nav">
         <div className="brand">Poker Beasts</div>
         <div className="links">
-          <a href="/colorway-1">Colorway 1</a>
-          <a href="/colorway-2">Colorway 2</a>
-          <a href="/colorway-3">Colorway 3</a>
+          <a href="/?colorway=1">Colorway 1</a>
+          <a href="/?colorway=2">Colorway 2</a>
+          <a href="/?colorway=3">Colorway 3</a>
         </div>
       </nav>
 
