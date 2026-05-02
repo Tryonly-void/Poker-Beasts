@@ -1,0 +1,322 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: var(--background);
+  color: var(--text);
+}
+
+main {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 10%, var(--primary), transparent 28%),
+    radial-gradient(circle at 85% 25%, var(--secondary), transparent 24%),
+    radial-gradient(circle at 50% 90%, var(--accent), transparent 18%),
+    var(--background);
+}
+
+h1,
+h2,
+h3,
+p,
+span,
+strong {
+  color: inherit;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 8%;
+}
+
+.brand {
+  font-weight: 900;
+  font-size: 22px;
+}
+
+.links {
+  display: flex;
+  gap: 16px;
+}
+
+a {
+  color: var(--text);
+  text-decoration: none;
+  opacity: 0.75;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+.hero {
+  margin: 40px 8%;
+  padding: 80px 40px;
+  border-radius: 36px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #f8fafc;
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
+}
+
+.hero p {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(48px, 9vw, 120px);
+  line-height: 0.9;
+}
+
+.hero span {
+  display: block;
+  margin-top: 24px;
+  max-width: 640px;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+.palette {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  padding: 40px 8%;
+}
+
+.swatch {
+  min-height: 180px;
+  border-radius: 28px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.swatch span {
+  opacity: 0.9;
+  font-weight: 700;
+}
+
+.swatch strong {
+  font-size: 20px;
+}
+
+.background {
+  background: var(--background);
+  color: var(--text);
+}
+
+.primary {
+  background: var(--primary);
+  color: #f8fafc;
+}
+
+.secondary {
+  background: var(--secondary);
+  color: #0f172a;
+}
+
+.accent {
+  background: var(--accent);
+  color: #0f172a;
+}
+
+.button-section,
+.progress-section {
+  padding: 30px 8%;
+}
+
+.button-section h2,
+.progress-section h2 {
+  font-size: 36px;
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 16px 26px;
+  font-weight: 900;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background: var(--primary);
+  color: #f8fafc;
+}
+
+.btn-secondary {
+  background: var(--secondary);
+  color: #0f172a;
+}
+
+.btn-accent {
+  background: var(--accent);
+  color: #0f172a;
+}
+
+.btn-outline {
+  background: transparent;
+  color: var(--text);
+  border: 2px solid var(--text);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  padding: 50px 8%;
+}
+
+.card {
+  min-height: 280px;
+  border-radius: 32px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card p {
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.card h2 {
+  font-size: 38px;
+  margin: 8px 0;
+}
+
+.card span {
+  line-height: 1.6;
+}
+
+.card-primary {
+  background: var(--primary);
+  color: #f8fafc;
+}
+
+.card-secondary {
+  background: var(--secondary);
+  color: #0f172a;
+}
+
+.card-accent {
+  background: var(--accent);
+  color: #0f172a;
+}
+
+.blocks {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 22px;
+  padding: 30px 8%;
+}
+
+.text-block,
+.stats {
+  border-radius: 32px;
+  padding: 34px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  border: 2px solid rgba(255, 255, 255, 0.14);
+}
+
+.text-block p {
+  color: var(--accent);
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.text-block h2 {
+  font-size: 42px;
+  margin: 10px 0;
+}
+
+.text-block span {
+  line-height: 1.7;
+  font-size: 18px;
+}
+
+.stats {
+  display: grid;
+  gap: 16px;
+}
+
+.stats div {
+  border-radius: 24px;
+  padding: 24px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #f8fafc;
+}
+
+.stats strong {
+  display: block;
+  font-size: 42px;
+}
+
+.stats span {
+  opacity: 0.9;
+}
+
+.progress {
+  height: 30px;
+  border-radius: 999px;
+  background: var(--primary);
+  overflow: hidden;
+}
+
+.progress div {
+  width: 68%;
+  height: 100%;
+  background: linear-gradient(90deg, var(--secondary), var(--accent));
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 8%;
+  opacity: 0.85;
+}
+
+@media (max-width: 850px) {
+  .nav,
+  footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .links,
+  .button-row {
+    flex-wrap: wrap;
+  }
+
+  .palette,
+  .cards,
+  .blocks {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    margin-top: 20px;
+    padding: 50px 24px;
+  }
+}
